@@ -12,7 +12,7 @@
 
 ## Description
 
-This web application is designed to analyze mental health data among students. It provides various functionalities, including:
+This web application midterm is designed to analyze mental health data among students. It provides various functionalities, including:
 
 - Viewing all student records.
 - Filtering students based on specific mental health issues (e.g., Depression, Anxiety, Panic Attack).
