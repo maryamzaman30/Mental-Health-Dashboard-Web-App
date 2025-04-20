@@ -1,0 +1,81 @@
+<!-- Original code written by me -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Dashboard</title>
+    <!-- Link to the external CSS file styles.css -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Statistics Dashboard</h1>
+
+    <!-- A back button to navigate back to the home page -->
+    <ul class="back-button">
+        <li><a href="/">← Back</a></li>
+    </ul>
+    
+    <!-- Table to display statistics -->
+    <table>
+        <!-- Table header with two columns: Statistic & Value -->
+        <thead>
+            <tr>
+                <th>Statistic</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Array of statistic names to be displayed in the table -->
+            <% const statNames = [
+                "Total Students",
+                "Average CGPA",
+                "Average Age",
+                "Total Depression Cases",
+                "Total Anxiety Cases",
+                "Total Panic Attack Cases",
+                "Average Sleep Quality",
+                "Average Study Stress Level",
+                "Average Study Hours Per Week",
+                "Average Academic Engagement",
+                "Gender Distribution",
+                "Course-wise Distribution",
+                "Year-wise Distribution",
+                "Specialist Treatment Distribution",
+                "Mental Health Support Distribution",
+                "Average Symptom Frequency (Last 7 Days)",
+                "Course-wise Average CGPA",
+                "Course-wise Average Sleep Quality",
+                "Course-wise Average Study Stress Level",
+                "Year-wise Average Stress"
+            ]; %>
+
+            <!-- Loop through the statistic names array & generate a row for each statistic -->
+            <% statNames.forEach((statName, idx) => { %>
+                <tr>
+                    <!-- Render the name of the statistic in the first column -->
+                    <td><%= statName %></td>
+                    <td>
+                        <!-- Get the corresponding statistic data -->
+                        <% 
+                            const statData = statistics[`stat${idx + 1}`];
+                            <!-- If the statistic data is an array (e.g., for multi-value statistics) -->
+                            if (Array.isArray(statData)) { 
+                        %>
+                            <!-- Render the multi-value statistics as an unordered list -->
+                            <ul>
+                                <% statData.forEach(item => { %>
+                                    <!-- Loop through each item (row) in the array & display its key-value pairs -->
+                                    <% Object.keys(item).forEach(key => { %>
+                                        <li><strong><%= key %>:</strong> <%= item[key] %></li>
+                                    <% }); %>
+                                <% }); %>
+                            </ul>
+                        <% } %>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- Original code written by me -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engagement and Stress by Mental Health Support</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Loads the Chart.js library from a CDN to create charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Average Engagement and Stress by Mental Health Support</h1>
+
+    <!-- A back button to navigate back to the home page -->
+    <ul class="back-button">
+        <li><a href="/">← Back</a></li>
+    </ul>
+
+    <!-- Loads the Chart.js library from a CDN to create charts -->
+    <div class="container">
+        <!-- Brief description of the page -->   
+        <p>Shows how average engagement & stress levels differ between students who have mental health support & those who don't.</p>
+    </div>
+
+    <!-- Creates a canvas element where the chart will be rendered; sets its width & height -->
+    <canvas id="engagementStressBarChart" width="800" height="400"></canvas>
+    <!-- Links to the external JavaScript file to add functionality & handle the chart rendering -->
+    <script src="/scripts/avgEngagementStress.js"></script>
+</body>
+</html>

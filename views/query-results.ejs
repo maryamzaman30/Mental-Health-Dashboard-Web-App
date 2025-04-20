@@ -1,0 +1,60 @@
+<!-- Original code written by me -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Query Results</title>
+  <!-- Link to the external CSS file styles.css -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1><%= title %></h1>
+
+  <!-- A back button to navigate back to the home page -->
+  <ul class="back-button">
+    <li><a href="/">← Back</a></li>
+  </ul>
+
+  <!-- Conditionally render a dropdown menu based on showDropdown -->
+  <div class="container">
+    <!-- If showDropdown is true, render a form to filter by a mental health issue -->
+    <% if (showDropdown) { %>
+      <form method="get" action="/api/students-by-issue">
+          <label for="issue">Select Mental Health Issue:</label>
+          <select name="issue" id="issue">
+            <!-- Loop through the mentalHealthIssues array & create a dropdown option for each item -->
+              <% mentalHealthIssues.forEach(option => { %>
+                  <option value="<%= option %>" <%= issue === option ? 'selected' : '' %>>
+                      <%= option %>
+                  </option>
+              <% }); %>
+          </select>
+          <!-- Submit button to filter the results based on the selected issue -->
+          <button type="submit">Filter</button>
+      </form>
+    <% } %>
+  </div>
+
+  <!-- Display the query results in a table -->
+  <table border="1">
+    <thead>
+      <tr>
+        <!-- Loop through the keys of the first result & create a table header for each key -->
+        <% for (let key in results[0]) { %>
+          <th><%= key %></th>
+        <% } %>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through each row of results & display the data in table rows -->
+      <% results.forEach(row => { %>
+        <tr>
+          <!-- Loop through the keys of the current row & display the corresponding values in table cells -->
+          <% for (let key in row) { %>
+            <td><%= row[key] %></td>
+          <% } %>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

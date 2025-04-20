@@ -1,0 +1,32 @@
+<!-- Original code written by me -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA, Study Hours, and Sleep Quality</title>
+    <!-- Link to the external CSS file styles.css -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Loads the Chart.js library from a CDN to create charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Relationship Between CGPA, Study Hours, and Sleep Quality</h1>
+
+    <!-- A back button to navigate back to the home page -->
+    <ul class="back-button">
+        <li><a href="/">← Back</a></li>
+    </ul>
+    
+    <!-- A container for the description text, dropdown & button -->
+    <div class="container">
+        <!-- Brief description of the page -->     
+        <p>Bubble chart Shows how students' CGPA, study hours & sleep quality are related. Each bubble represents a student & the bubble size indicating sleep quality.</p>
+    </div>    
+
+    <!-- Creates a canvas element where the chart will be rendered; sets its width & height -->
+    <canvas id="cgpaBubbleChart" width="800" height="400"></canvas>
+    <!-- Links to the external JavaScript file to add functionality & handle the chart rendering -->
+    <script src="/scripts/cgpaStudySleep.js"></script>
+</body>
+</html>

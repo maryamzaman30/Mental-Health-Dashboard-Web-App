@@ -1,0 +1,108 @@
+/* Original code written by me */
+/* Base settings ------------------------------------------------------------------------------ */
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0; /* Removes default margin around the body */
+    padding: 0; /* Removes default padding around the body */
+    color: black; /* Sets the default text color */
+}
+
+/* Styling for h1 */
+h1 
+{
+    text-align: center;
+}
+
+/* Styling for unordered list (ul) */
+ul 
+{
+    list-style: none; /* Removes the default list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar Links -------------------------------------------------------------------------------- */
+/* Styling for the navigation menu (ul) */
+nav ul 
+{
+    display: flex; /* Uses a flexible layout for list items */
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    gap: 15px; /* Adds space between the list items */
+}
+
+/* Styling for each list item in the navigation menu */
+nav ul li 
+{
+    text-align: center;
+    text-decoration: none; /* Removes the default text decoration (underline) */
+    padding: 5px 5px 0 5px;
+}
+
+/* Styling for the anchor tags inside the list items */
+nav ul li a 
+{
+    color: darkblue;
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Styling for the links when hovered */
+nav ul li a:hover 
+{
+    color: darkorange; /* Changes the link color on hover */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Adds a smooth transition effect for color change */
+}
+
+/* Back Button ------------------------------------------------------------------------------------ */
+/* Style the back button to be at the top left corner */
+.back-button 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 5px;
+    padding: 0; /* Remove default padding */
+}
+
+.back-button a 
+{
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    color: black; 
+}
+
+.back-button a:hover 
+{
+    color: red; /*Change color to red when hovered*/
+    transition: color 0.3s ease; /* Adds a smooth transition effect for color change */
+}
+
+/* Table  --------------------------------------------------------------------------------------- */
+table 
+{
+    width: 100%;
+    border-collapse: collapse; /* Ensures table borders collapse into a single line */
+    margin: 40px auto; /* Adds space above & below the table & centers it */
+}
+
+td, th 
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Styling for the unordered list (ul) in Statistics table */
+ul li 
+{
+    margin: 5px 0;
+}
+
+/* description texts, dropdown & button ------------------------------------------------------------- */
+.container
+{
+    text-align: center; /*Centers the texts, dropdown & button*/    
+}
