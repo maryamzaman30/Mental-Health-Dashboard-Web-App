@@ -1,14 +1,14 @@
-# Students-Mental-Health-Dashboard-Web-App
+# Students Mental Health Dashboard Web App
 
 ## Sep 2024 - Jan 2025
 
 ## Associated with University of London
 
-Link to Demo -
-Dataset used - https://www.kaggle.com/datasets/junnn0126/university-students-mental-health/data
+- Link to Demo - https://youtu.be/h7AXmPBoAMU
+- Dataset used - https://www.kaggle.com/datasets/junnn0126/university-students-mental-health/data
 
-Link To the Coursera lab (with the database already created) 
-To run you need a Coursera account - https://hub.labs.coursera.org/connect/sharedjfjkgdqt?forceRefresh=false&token=SUfrvh1bIhlQJVT7jaJp&path=%2F%3Ffolder%3D%2Fhome%2Fcoder%2Fproject&isIframe=false&isLabVersioning=true
+- Link To the Coursera lab (with the database already created) 
+- To run you need a Coursera account - https://hub.labs.coursera.org/connect/sharedjfjkgdqt?forceRefresh=false&token=SUfrvh1bIhlQJVT7jaJp&path=%2F%3Ffolder%3D%2Fhome%2Fcoder%2Fproject&isIframe=false&isLabVersioning=true
 
 ## Description
 
@@ -174,6 +174,8 @@ node app.js
 
 - Use the navigation menu to explore different analysis features.
 - View statistics, mental health issues, and more through the provided links.
+
+- Refer to Report.pdf in this folder for more details 
 
 ## License
 
